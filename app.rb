@@ -11,7 +11,7 @@ require './db/models'
 
 get '/' do
   # 'Hello world!'
-  session["user"]
+  raise session
 end
 
 post '/smith' do
