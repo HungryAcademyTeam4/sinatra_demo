@@ -14,3 +14,7 @@ set :branch, "master"
 
 default_run_options[:pty] = true
 
+  desc "Start the Thin processes"
+  task :start do
+    sudo "bundle exec ruby ./app"
+  end
