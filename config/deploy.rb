@@ -14,7 +14,13 @@ set :branch, "master"
 
 default_run_options[:pty] = true
 
+namespace :deploy do
   desc "Start the Thin processes"
-  task :start do
-    sudo "bundle exec ruby ./app"
+  task :bundle_install do
+    run "cd /home/apps/#{application}/current && bundle install"
   end
+  task :start do
+    bundle_install
+    run "cd /home/apps/#{application}/current && bundle exec ruby ./app.rb"
+  end
+end
