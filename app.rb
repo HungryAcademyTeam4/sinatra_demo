@@ -31,3 +31,7 @@ end
 get '/messages' do
   Message.all.map(&:body).join("<br>")
 end
+
+get '/jq' do
+  'This is for JQ to prove that she deployed'
+end
