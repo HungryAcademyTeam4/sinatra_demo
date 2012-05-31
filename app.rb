@@ -10,8 +10,8 @@ require './db/models'
 
 
 get '/' do
-  'Hello world!'
-  session[:user]
+  # 'Hello world!'
+  session["user"]
 end
 
 post '/smith' do
