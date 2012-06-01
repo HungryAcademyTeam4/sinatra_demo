@@ -11,7 +11,7 @@ require './db/models'
 
 get '/' do
   # 'Hello world!'
-  Rack::Session::Cookie.inspect
+  Rack.session.inspect
 end
 
 post '/smith' do
