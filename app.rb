@@ -11,6 +11,7 @@ require './db/models'
 
 get '/' do
   # 'Hello world!'
+  Rack::Session.inspect
   raise session.inspect
 end
 
