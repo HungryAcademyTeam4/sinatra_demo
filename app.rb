@@ -11,7 +11,7 @@ require './db/models'
 
 get '/' do
   # 'Hello world!'
-  Rack.session.inspect
+  session.inspect
 end
 
 post '/smith' do
