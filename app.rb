@@ -11,7 +11,7 @@ require './db/models'
 
 get '/' do
   # 'Hello world!'
-  session.inspect
+  raise [session.inspect]
 end
 
 post '/smith' do
