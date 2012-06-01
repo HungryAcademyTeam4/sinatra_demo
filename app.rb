@@ -3,6 +3,9 @@ require 'json'
 require 'active_record'
 require './db/models'
 
+enable :sessions
+set :session_secret 'HungryAcademy'
+
  ActiveRecord::Base.establish_connection(
    :adapter => 'sqlite3',
    :database =>  'db/test.db'
