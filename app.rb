@@ -4,7 +4,7 @@ require 'active_record'
 require './db/models'
 
 enable :sessions
-set :session_secret 'HungryAcademy'
+set :session_secret, 'HungryAcademy'
 
  ActiveRecord::Base.establish_connection(
    :adapter => 'sqlite3',
