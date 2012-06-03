@@ -13,7 +13,8 @@ set :session_secret, 'HungryAcademy'
 
 
 get '/' do
-  erb :index
+  "Foo #{session.inspect}!"
+  # erb :index
   # raise session.inspect
 end
 
