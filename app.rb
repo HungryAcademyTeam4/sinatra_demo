@@ -13,7 +13,8 @@ set :session_secret, 'HungryAcademy'
 
 
 get '/' do
-  "Foo #{session[user_info]}"
+  session_info = JSON.parse(session)
+  "Foo #{session.inspect}"
   # erb :index
   # raise session.inspect
 end
